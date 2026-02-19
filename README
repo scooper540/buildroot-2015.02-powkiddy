@@ -1,3 +1,18 @@
+for powkiddy look in _compile file:
+.config is defined for Powkiddy
+make menuconfig
+make -j2 toolchain
+export SYSROOT=/home/chris/powkiddy/sysroot
+cp -rf output/host/usr/bin/* $SYSROOT/bin/
+cp -rf output/host/usr/lib/ $SYSROOT/usr/
+cp -rf output/host/usr/libexec/ $SYSROOT/usr/
+cp -rf output/host/usr/arm-buildroot-linux-uclibcgnueabihf/include/ $SYSROOT/usr/
+cp -rf output/host/usr/arm-buildroot-linux-uclibcgnueabihf/sys-include/ $SYSROOT/usr/
+cp -rf output/host/usr/arm-buildroot-linux-uclibcgnueabihf/sysroot/* $SYSROOT
+
+
+
+
 To build and use the buildroot stuff, do the following:
 
 1) run 'make menuconfig'
