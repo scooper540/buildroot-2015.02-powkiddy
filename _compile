@@ -1,0 +1,11 @@
+make -j2 toolchain
+export SYSROOT=/home/chris/powkiddy/sysroot
+cp -rf output/host/usr/bin/* $SYSROOT/bin/
+cp -rf output/host/usr/lib/ $SYSROOT/usr/
+cp -rf output/host/usr/libexec/ $SYSROOT/usr/
+cp -rf output/host/usr/arm-buildroot-linux-uclibcgnueabihf/include/ $SYSROOT/usr/
+cp -rf output/host/usr/arm-buildroot-linux-uclibcgnueabihf/sys-include/ $SYSROOT/usr/
+cp -rf output/host/usr/arm-buildroot-linux-uclibcgnueabihf/sysroot/* $SYSROOT
+
+
+
